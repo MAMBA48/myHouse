@@ -5,15 +5,16 @@ export default createGlobalStyle`
     :root {
         --colorTxtHeader: #fff;
         --colorTxt: #000;
-        --shadowColor: 0px 0px 10px 1px rgba(0, 0, 0);
-        --bgColorContent: rgba(0, 0, 0, 0.3); 
+        --shadowColor: 0px 0px 8px 0.5px rgba(0, 0, 0, 0.250);
+        --bgColorContent: silver; 
     }
     * {
+        font-family: 'Poppins';
         padding: 0;
         margin: 0;
-        font-family: 'Roboto';
         text-align: justify;
         box-sizing: border-box;
+        border: none;
     }
     body {
         @media screen and (max-width: 500px) {
@@ -38,6 +39,7 @@ export default createGlobalStyle`
     }
     button {
         cursor: pointer;
+        font-weight: bolder;
     }
 
     .container {
@@ -72,12 +74,11 @@ export default createGlobalStyle`
 
         display: flex;
         gap: 1rem;
-        padding: 1rem;
-        box-shadow: var(--shadowColor);
+        padding: 0;
         min-width: 400px;
         width: 1024px;
         max-width: 80%;
-        background: lightgray;
+        background: transparent;
         border-radius: 1rem;
     }
     
@@ -104,21 +105,50 @@ export default createGlobalStyle`
         position: relative;
         box-shadow: var(--shadowColor);
         padding: 1rem;
+        padding-bottom: 1.5rem;
         background: var(--bgColorContent);
-        border-radius: 0.750rem;
+        border-radius: 1rem;
         flex-direction: column;
         width: auto;
+    }
+    .user-box-img {
+        display: flex;
+        position: relative;
+        gap: 1rem;
+    }
+    .user-photo {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 110px;
+        min-width: 110px;
+        border: 2px solid #000;
+        border-radius: 50%;
+    }
+    .topic-title {
+        display: flex;
+        padding: 0.5rem;
+        position: relative;
+        margin-bottom: 20px;
+        height: 40px;
+        background: rgba(0, 0, 0, 0.3);
+        color: #fff;
+        border-radius: 20px 20px 20px 0px;
     }
     .msg-content {
         position: relative;
     }
     .btn-show-hide {
         position: absolute;
+        background: rgba(0, 0, 0, 0.3);
+        color: #fff;
         right: 1rem;
         bottom: 1rem;
     }
     .btn-more-less {
         display: flex;
+        background: rgba(0, 0, 0, 0.3);
+        color: #fff;
         position: absolute;
         padding: 0.3rem;
         border-radius: 0.3rem;

@@ -7,20 +7,21 @@ const PortfolioPage = () => {
     const [textInput, setTextInput] = useState('')
     //const [info, setInfo] = useState('')
 
-    const req = () => {
+    const req = async () => {
         const getData = await axios.get('http://localhost:3000/infoUsers')
+        return getData
     }
-
+    console.log(req)
     return (
         <>
             <main className="container">
             <Header />
-                <section className="content-area">
+                <section className="section-content">
                     <div>
                     <h3>Training box:</h3>
                         <form action="">
                             <label htmlFor="">Digite algo:</label>
-                            <input 
+                            <input
                             type="text" 
                             placeholder="digit something..."
                             id=""
@@ -39,6 +40,7 @@ const PortfolioPage = () => {
                                 border:'1px solid #000',
                                 background:'rgb(0,0,0, 0.250)'
                                 }}>
+                                <tbody>
                                 <tr>
                                     <th>id</th>
                                     <th>info</th>
@@ -49,6 +51,7 @@ const PortfolioPage = () => {
                                     <td>{textInput}</td>
                                     <td>data registrada</td>
                                 </tr>
+                                </tbody>
                             </table>
                             <b>LEMBRETE: **o valor setado no state só será atualizado após, toda a execução da função!**</b>
                         </article>

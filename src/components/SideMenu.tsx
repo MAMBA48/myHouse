@@ -12,11 +12,14 @@ const MenuStyle = styled.article`
     display: flex;
     position: relative;
     flex-direction: column;
-    min-height: 400px;
+    min-height: 100px;
     width: auto;
     min-width: 170px;
     max-width: 170px;
     padding: 1rem;
+    border: 1px solid red;
+    border-radius: 1rem;
+    box-shadow: 0px 0px 8px 0.5px rgba(0, 0, 0, 0.250);
     background: var(--bgColorContent);
     
     & small {
@@ -31,24 +34,30 @@ const MenuStyle = styled.article`
     }
     & li {
         display: flex;
-        border: 1px solid white;
         position: relative;
         flex-direction: column;
         margin-right: 1.5rem;
+    }
+    & h3 {
+        margin-bottom: 1rem;
     }
 
 `
 const Button = styled.button`
     display: flex;
+    text-align: center;
     font-size: large;
+    background: rgba(0, 0, 0, 0.3);
+    color: #fff;
     justify-content: center;
     align-items: center;
-    height: 18px;
-    width: 18px;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
     position: absolute;
     right: 0;
 `
-
+//CORRIGIR BUG QUANDO APERTA BOTAO ABRIR O HEIGHT EXPANDE JUNTO
 export const SideMenu = () => {
     const [isOpen, setIsOpen] = useState(false)
     const [isOpen1, setIsOpen1] = useState(false)
@@ -57,10 +66,10 @@ export const SideMenu = () => {
     return (
         <>
             <MenuStyle>
-                    <h2>menu</h2>
+                    <h3>Skills</h3>
                         <ul>
                             <li>
-                                <p>opcao 1 </p>
+                                <p>Javascript</p>
                                 {isOpen && (
                                     <small>
                                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque voluptate expedita minus! Deleniti sit obcaecati quisquam minus repellat distinctio blanditiis ullam ex, laudantium, magni dolor nesciunt, dolores temporibus reiciendis nulla?
@@ -71,7 +80,7 @@ export const SideMenu = () => {
                                 </Button>    
                             </li>
                             <li>
-                            <p>opcao 2 </p>
+                            <p>ReactJs</p>
                                 {isOpen1 && (
                                     <small>
                                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque voluptate expedita minus! Deleniti sit obcaecati quisquam minus repellat distinctio blanditiis ullam ex, laudantium, magni dolor nesciunt, dolores temporibus reiciendis nulla?
@@ -82,7 +91,7 @@ export const SideMenu = () => {
                                 </Button>
                             </li>
                             <li>
-                            <p>opcao 3 </p>
+                            <p>Css</p>
                                 {isOpen2 && (
                                     <small>
                                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque voluptate expedita minus! Deleniti sit obcaecati quisquam minus repellat distinctio blanditiis ullam ex, laudantium, magni dolor nesciunt, dolores temporibus reiciendis nulla?
@@ -93,7 +102,7 @@ export const SideMenu = () => {
                                 </Button>
                             </li>
                             <li>
-                            <p>opcao 4 </p>
+                            <p>Html</p>
                                 {isOpen3 && (
                                     <small>
                                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque voluptate expedita minus! Deleniti sit obcaecati quisquam minus repellat distinctio blanditiis ullam ex, laudantium, magni dolor nesciunt, dolores temporibus reiciendis nulla?
